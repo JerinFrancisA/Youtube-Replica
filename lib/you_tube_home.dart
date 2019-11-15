@@ -7,23 +7,35 @@ class YouTubeHome extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Color(0xFF282828),
           title: Row(
             children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    FontAwesomeIcons.youtubeSquare,
-                  ),
-                ),
+              Icon(
+                FontAwesomeIcons.youtubeSquare,
+                color: Colors.grey.shade300,
               ),
               Text(
                 'YouTube',
                 style: TextStyle(
                   wordSpacing: -1.5,
                   fontWeight: FontWeight.w700,
+                  color: Colors.grey.shade300,
                 ),
+              ),
+              SizedBox(
+                width: 45.0,
+              ),
+              Icon(
+                Icons.videocam,
+                color: Colors.grey.shade300,
+              ),
+              Icon(
+                Icons.search,
+                color: Colors.grey.shade300,
+              ),
+              Icon(
+                Icons.account_circle,
+                color: Colors.grey.shade300,
               ),
             ],
           ),
