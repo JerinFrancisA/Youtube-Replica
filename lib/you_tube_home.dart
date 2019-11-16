@@ -69,7 +69,7 @@ class YouTubeHome extends StatelessWidget {
           itemBuilder: (context, index) {
             return Video(
               thumbnail: videos[index]['thumbnail'],
-              duration:
+              duration: videos[index]['duration'],
               title: videos[index]['title'],
               channelImage: videos[index]['channelImage'],
               channel: videos[index]['channel'],
