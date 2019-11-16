@@ -26,11 +26,19 @@ class YouTubeHome extends StatelessWidget {
                           color: Colors.red,
                         ),
                       ),
+                      IconTheme(
+                        data: IconThemeData(color: Colors.white),
+                        child: Icon(
+                          FontAwesomeIcons.youtube,
+                          color: Colors.red,
+                        ),
+                      ),
                       Text(
                         'YouTube',
                         style: TextStyle(
                           wordSpacing: -1.5,
                           fontWeight: FontWeight.w700,
+                          fontFamily: 'Oswald',
                         ),
                       ),
                     ],
@@ -57,11 +65,6 @@ class YouTubeHome extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        body: Column(
-          children: [
-            Text('TEST'),
-          ],
         ),
       ),
     );
