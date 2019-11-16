@@ -6,7 +6,7 @@ class YouTubeHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: Color(0xFF1F1F1F),
+        backgroundColor: Color(0xFF1F1F1F),
         appBar: AppBar(
           backgroundColor: Color(0xFF282828),
           title: Row(
