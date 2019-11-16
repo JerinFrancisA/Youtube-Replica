@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Video extends StatelessWidget {
   final thumbnail;
+  final duration;
   final title;
   final channelImage;
   final channel;
@@ -11,6 +12,7 @@ class Video extends StatelessWidget {
 
   Video(
       {@required this.thumbnail,
+      @required this.duration,
       @required this.title,
       @required this.channelImage,
       @required this.channel,
@@ -26,9 +28,35 @@ class Video extends StatelessWidget {
         children: [
           Container(
             height: 200.0,
-            child: Image(
-              image: NetworkImage(thumbnail),
-              fit: BoxFit.cover,
+            child: Stack(
+              children: [
+                Image(
+                  image: NetworkImage(thumbnail),
+                  fit: BoxFit.cover,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(4.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Text(
+                          duration,
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           Row(
@@ -36,7 +64,10 @@ class Video extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 6.0, right: 10.0,),
+                  padding: const EdgeInsets.only(
+                    left: 6.0,
+                    right: 10.0,
+                  ),
                   child: CircleAvatar(
                     backgroundImage: NetworkImage(channelImage),
                     radius: 20.0,
@@ -80,7 +111,10 @@ class Video extends StatelessWidget {
                 ),
               ),
               IconButton(
-                icon: Icon(FontAwesomeIcons.ellipsisV, size: 18.0,),
+                icon: Icon(
+                  FontAwesomeIcons.ellipsisV,
+                  size: 18.0,
+                ),
                 onPressed: null,
               ),
             ],
