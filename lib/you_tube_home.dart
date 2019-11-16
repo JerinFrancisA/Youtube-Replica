@@ -11,32 +11,49 @@ class YouTubeHome extends StatelessWidget {
           backgroundColor: Color(0xFF282828),
           title: Row(
             children: [
-              Icon(
-                FontAwesomeIcons.youtubeSquare,
-                color: Colors.grey.shade300,
-              ),
-              Text(
-                'YouTube',
-                style: TextStyle(
-                  wordSpacing: -1.5,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.grey.shade300,
+              Expanded(
+                flex: 4,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        child: Icon(
+                          FontAwesomeIcons.youtube,
+                          color: Colors.red,
+                        ),
+                      ),
+                      Text(
+                        'YouTube',
+                        style: TextStyle(
+                          wordSpacing: -1.5,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              SizedBox(
-                width: 45.0,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.videocam,
+                ),
               ),
-              Icon(
-                Icons.videocam,
-                color: Colors.grey.shade300,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.search,
+                ),
               ),
-              Icon(
-                Icons.search,
-                color: Colors.grey.shade300,
-              ),
-              Icon(
-                Icons.account_circle,
-                color: Colors.grey.shade300,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.account_circle,
+                ),
               ),
             ],
           ),
