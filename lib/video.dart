@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Video extends StatelessWidget {
   final thumbnail;
@@ -20,20 +21,25 @@ class Video extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 400.0,
+      height: 280.0,
       child: Column(
         children: [
-          Image(
-            image: NetworkImage(thumbnail),
+          Container(
+            height: 200.0,
+            child: Image(
+              image: NetworkImage(thumbnail),
+              fit: BoxFit.cover,
+            ),
           ),
           Row(
             children: <Widget>[
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(left: 6.0, right: 10.0,),
                   child: CircleAvatar(
                     backgroundImage: NetworkImage(channelImage),
+                    radius: 20.0,
                   ),
                 ),
               ),
@@ -41,21 +47,41 @@ class Video extends StatelessWidget {
                 flex: 5,
                 child: Column(
                   children: <Widget>[
-                    Text(
-                      title,
-                      maxLines: 3,
-                      style: TextStyle(
-                        fontSize: 15.0,
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          title,
+                          maxLines: 3,
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
                       ),
                     ),
-                    Text(
-                      '$channel . $views views . $time age',
-                      style: TextStyle(
-                        fontSize: 10.0,
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          '$channel · $views views · $time age',
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            color: Colors.grey.shade500,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
                       ),
                     ),
                   ],
                 ),
+              ),
+              IconButton(
+                icon: Icon(FontAwesomeIcons.ellipsisV, size: 18.0,),
+                onPressed: null,
               ),
             ],
           ),
