@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:youtube_replica/video.dart';
 
 class YouTubeHome extends StatelessWidget {
   @override
@@ -21,13 +22,6 @@ class YouTubeHome extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                         ),
-                        child: Icon(
-                          FontAwesomeIcons.youtube,
-                          color: Colors.red,
-                        ),
-                      ),
-                      IconTheme(
-                        data: IconThemeData(color: Colors.white),
                         child: Icon(
                           FontAwesomeIcons.youtube,
                           color: Colors.red,

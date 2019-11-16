@@ -23,11 +23,8 @@ class Video extends StatelessWidget {
       height: 400.0,
       child: Column(
         children: [
-          Expanded(
-            flex: 5,
-            child: Image(
-              image: NetworkImage(thumbnail),
-            ),
+          Image(
+            image: NetworkImage(thumbnail),
           ),
           Row(
             children: <Widget>[
