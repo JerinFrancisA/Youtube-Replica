@@ -79,79 +79,75 @@ class YouTubeHome extends StatelessWidget {
         ),
         bottomNavigationBar: BottomAppBar(
           child: Row(
-
+            children: [
+              BottomAppBarElement(
+                icon: Icon(
+                  Icons.home,
+                  size: 25.0,
+                ),
+                text: Text(
+                  'Home',
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ),
+              BottomAppBarElement(
+                icon: Icon(
+                  FontAwesomeIcons.fire,
+                  size: 20.0,
+                  color: Colors.grey.shade400,
+                ),
+                text: Text(
+                  'Trending',
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ),
+              BottomAppBarElement(
+                icon: Icon(
+                  Icons.subscriptions,
+                  size: 22.0,
+                  color: Colors.grey.shade400,
+                ),
+                text: Text(
+                  'Subscriptions',
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ),
+              BottomAppBarElement(
+                icon: Icon(
+                  Icons.mail,
+                  size: 24.0,
+                  color: Colors.grey.shade400,
+                ),
+                text: Text(
+                  'Inbox',
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ),
+              BottomAppBarElement(
+                icon: Icon(
+                  Icons.video_library,
+                  size: 22.0,
+                  color: Colors.grey.shade400,
+                ),
+                text: Text(
+                  'Library',
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
-
-currentIndex: 0,
-items: [
-BottomNavigationBarItem(
-icon: Icon(
-Icons.home,
-size: 25.0,
-),
-title: Text(
-'Home',
-style: TextStyle(
-fontSize: 10.0,
-),
-),
-),
-BottomNavigationBarItem(
-icon: Icon(
-FontAwesomeIcons.fire,
-size: 20.0,
-color: Colors.grey.shade400,
-),
-title: Text(
-'Trending',
-style: TextStyle(
-fontSize: 10.0,
-),
-),
-),
-BottomNavigationBarItem(
-icon: Icon(
-Icons.subscriptions,
-size: 22.0,
-color: Colors.grey.shade400,
-),
-title: Text(
-'Subscriptions',
-style: TextStyle(
-fontSize: 10.0,
-),
-),
-),
-BottomNavigationBarItem(
-icon: Icon(
-Icons.mail,
-size: 24.0,
-color: Colors.grey.shade400,
-),
-title: Text(
-'Inbox',
-style: TextStyle(
-fontSize: 10.0,
-),
-),
-),
-//            BottomNavigationBarItem(
-//              icon: Icon(
-//                Icons.video_library,
-//                size: 22.0,
-//                color: Colors.grey.shade400,
-//              ),
-//              title: Text(
-//                'Library',
-//                style: TextStyle(
-//                  fontSize: 10.0,
-//                ),
-//              ),
-//            ),
-],
-)

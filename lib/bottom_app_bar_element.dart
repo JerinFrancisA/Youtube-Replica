@@ -10,16 +10,8 @@ class BottomAppBarElement extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(
-          icon,
-          size: 25.0,
-        ),
-        Text(
-          text,
-          style: TextStyle(
-            fontSize: 10.0,
-          ),
-        ),
+        icon,
+        text,
       ],
     );
   }
