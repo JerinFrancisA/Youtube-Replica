@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youtube_replica/video.dart';
+import 'package:youtube_replica/video_list.dart';
+import 'package:youtube_replica/bottom_app_bar_element.dart';
 
 class YouTubeHome extends StatelessWidget {
   @override
@@ -19,10 +21,14 @@ class YouTubeHome extends StatelessWidget {
                   child: Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right: 5.0),
-                        child: Icon(
-                          FontAwesomeIcons.youtube,
-                          color: Colors.red,
+                        padding: const EdgeInsets.only(right: 4.0),
+                        child: Container(
+                          width: 30.0,
+                          height: 25.0,
+                          child: Image.asset(
+                            'images/icon.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       Text(
@@ -38,19 +44,19 @@ class YouTubeHome extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Icon(
                   Icons.videocam,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Icon(
                   Icons.search,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Icon(
                   Icons.account_circle,
                 ),
@@ -58,99 +64,94 @@ class YouTubeHome extends StatelessWidget {
             ],
           ),
         ),
-        body: ListView(
-          children: [
-            Column(
-              children: [
-                Video(
-                  thumbnail:
-                      'https://i.ytimg.com/vi/5NxKNrfqUjs/maxresdefault.jpg',
-                  title: 'SIDEMEN \$20,000 VS \$200 HOLIDAY (EUROPE EDITION)',
-                  channelImage:
-                      'https://pbs.twimg.com/profile_images/1140596536205877248/2UYQ4X8a_400x400.jpg',
-                  channel: 'Sidemen',
-                  views: '12.3 M',
-                  time: '1 month',
-                ),
-                Video(
-                  thumbnail:
-                      'https://i.ytimg.com/vi/AFP-GlX3HjQ/maxresdefault.jpg',
-                  title: 'Queen - Bohemian Rhapsody HD',
-                  channelImage:
-                      'https://yt3.ggpht.com/a/AGF-l7-hRQSYueq9V3KtUAlGUT-OYvpEXIduBulF_A=s900-c-k-c0xffffffff-no-rj-mo',
-                  channel: 'Queen Official',
-                  views: '1 B',
-                  time: '11 years',
-                ),
-                Video(
-                  thumbnail:
-                      'https://i.ytimg.com/vi/pRpeEdMmmQ0/maxresdefault.jpg',
-                  title:
-                      'Shakira - Waka Waka (This Time for Africa) (The Official 2010 FIFA World Cup™ Song)',
-                  channelImage:
-                      'https://404store.com/2018/06/16/shakira-youtube-2017.jpg',
-                  channel: 'Shakira',
-                  views: '2.3 B',
-                  time: '9 years',
-                ),
-              ],
-            ),
-          ],
+        body: ListView.builder(
+          itemCount: videos.length,
+          itemBuilder: (context, index) {
+            return Video(
+              thumbnail: videos[index]['thumbnail'],
+              title: videos[index]['title'],
+              channelImage: videos[index]['channelImage'],
+              channel: videos[index]['channel'],
+              views: videos[index]['views'],
+              time: videos[index]['time'],
+            );
+          },
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 0,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                size: 25.0,
-              ),
-              title: Text(
-                'Ho',
-                style: TextStyle(
-                  fontSize: 10.0,
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.add, size: 22.0),
-              title: Text(
-                'T',
-                style: TextStyle(
-                  fontSize: 10.0,
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.subscriptions, size: 22.0),
-              title: Text(
-                'Sub',
-                style: TextStyle(
-                  fontSize: 10.0,
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.mail, size: 24.0),
-              title: Text(
-                'Inbox',
-                style: TextStyle(
-                  fontSize: 10.0,
-                ),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.video_library, size: 22.0),
-              title: Text(
-                'Lib',
-                style: TextStyle(
-                  fontSize: 10.0,
-                ),
-              ),
-            ),
-          ],
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+
+          ),
         ),
       ),
     );
   }
 }
+
+currentIndex: 0,
+items: [
+BottomNavigationBarItem(
+icon: Icon(
+Icons.home,
+size: 25.0,
+),
+title: Text(
+'Home',
+style: TextStyle(
+fontSize: 10.0,
+),
+),
+),
+BottomNavigationBarItem(
+icon: Icon(
+FontAwesomeIcons.fire,
+size: 20.0,
+color: Colors.grey.shade400,
+),
+title: Text(
+'Trending',
+style: TextStyle(
+fontSize: 10.0,
+),
+),
+),
+BottomNavigationBarItem(
+icon: Icon(
+Icons.subscriptions,
+size: 22.0,
+color: Colors.grey.shade400,
+),
+title: Text(
+'Subscriptions',
+style: TextStyle(
+fontSize: 10.0,
+),
+),
+),
+BottomNavigationBarItem(
+icon: Icon(
+Icons.mail,
+size: 24.0,
+color: Colors.grey.shade400,
+),
+title: Text(
+'Inbox',
+style: TextStyle(
+fontSize: 10.0,
+),
+),
+),
+//            BottomNavigationBarItem(
+//              icon: Icon(
+//                Icons.video_library,
+//                size: 22.0,
+//                color: Colors.grey.shade400,
+//              ),
+//              title: Text(
+//                'Library',
+//                style: TextStyle(
+//                  fontSize: 10.0,
+//                ),
+//              ),
+//            ),
+],
+)
