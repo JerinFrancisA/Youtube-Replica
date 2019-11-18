@@ -91,74 +91,80 @@ class _YouTubeHomeState extends State<YouTubeHome> {
         ),
         bottomNavigationBar: Material(
           child: BottomAppBar(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                BottomAppBarElement(
-                  icon: Icon(
-                    Icons.home,
-                    size: 25.0,
-                  ),
-                  text: Text(
-                    'Home',
-                    style: TextStyle(
-                      fontSize: 10.0,
+            child: Container(
+              height: 40.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  BottomAppBarElement(
+                    icon: Icon(
+                      Icons.home,
+                      size: 25.0,
+                    ),
+                    text: Text(
+                      'Home',
+                      style: TextStyle(
+                        fontSize: 10.0,
+                      ),
                     ),
                   ),
-                ),
-                BottomAppBarElement(
-                  icon: Icon(
-                    FontAwesomeIcons.fire,
-                    size: 20.0,
-                    color: Colors.grey.shade400,
-                  ),
-                  text: Text(
-                    'Trending',
-                    style: TextStyle(
-                      fontSize: 10.0,
+                  BottomAppBarElement(
+                    icon: Icon(
+                      FontAwesomeIcons.fire,
+                      size: 20.0,
+                      color: Colors.grey.shade400,
+                    ),
+                    text: Text(
+                      'Trending',
+                      style: TextStyle(
+                        fontSize: 10.0,
+                      ),
                     ),
                   ),
-                ),
-                BottomAppBarElement(
-                  icon: Icon(
-                    Icons.subscriptions,
-                    size: 22.0,
-                    color: Colors.grey.shade400,
-                  ),
-                  text: Text(
-                    'Subscriptions',
-                    style: TextStyle(
-                      fontSize: 10.0,
+                  BottomAppBarElement(
+                    icon: Icon(
+                      Icons.subscriptions,
+                      size: 22.0,
+                      color: Colors.grey.shade400,
+                    ),
+                    text: Text(
+                      'Subscriptions',
+                      style: TextStyle(
+                        fontSize: 10.0,
+                      ),
                     ),
                   ),
-                ),
-                BottomAppBarElement(
-                  icon: Icon(
-                    Icons.mail,
-                    size: 24.0,
-                    color: Colors.grey.shade400,
-                  ),
-                  text: Text(
-                    'Inbox',
-                    style: TextStyle(
-                      fontSize: 10.0,
+                  BottomAppBarElement(
+                    icon: Icon(
+                      Icons.mail,
+                      size: 24.0,
+                      color: Colors.grey.shade400,
+                    ),
+                    text: Text(
+                      'Inbox',
+                      style: TextStyle(
+                        fontSize: 10.0,
+                      ),
                     ),
                   ),
-                ),
-                BottomAppBarElement(
-                  icon: Icon(
-                    Icons.video_library,
-                    size: 22.0,
-                    color: Colors.grey.shade400,
-                  ),
-                  text: Text(
-                    'Library',
-                    style: TextStyle(
-                      fontSize: 10.0,
+                  BottomAppBarElement(
+                    icon: Icon(
+                      Icons.video_library,
+                      size: 22.0,
+                      color: Colors.grey.shade400,
+                    ),
+                    text: Text(
+                      'Library',
+                      style: TextStyle(
+                        fontSize: 10.0,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
