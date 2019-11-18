@@ -92,9 +92,12 @@ class _YouTubeHomeState extends State<YouTubeHome> {
         bottomNavigationBar: Material(
           child: BottomAppBar(
             child: Container(
-              height: 40.0,
+              height: 48.0,
               child: Column(
                 children: <Widget>[
+                  SizedBox(
+                    height: 4.0,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -114,12 +117,13 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                         icon: Icon(
                           FontAwesomeIcons.fire,
                           size: 20.0,
-                          color: Colors.grey.shade400,
+                          color: Colors.grey.shade600,
                         ),
                         text: Text(
                           'Trending',
                           style: TextStyle(
                             fontSize: 10.0,
+                            color: Colors.grey.shade600,
                           ),
                         ),
                       ),
@@ -127,12 +131,13 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                         icon: Icon(
                           Icons.subscriptions,
                           size: 22.0,
-                          color: Colors.grey.shade400,
+                          color: Colors.grey.shade600,
                         ),
                         text: Text(
                           'Subscriptions',
                           style: TextStyle(
                             fontSize: 10.0,
+                            color: Colors.grey.shade600,
                           ),
                         ),
                       ),
@@ -140,12 +145,13 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                         icon: Icon(
                           Icons.mail,
                           size: 24.0,
-                          color: Colors.grey.shade400,
+                          color: Colors.grey.shade600,
                         ),
                         text: Text(
                           'Inbox',
                           style: TextStyle(
                             fontSize: 10.0,
+                            color: Colors.grey.shade600,
                           ),
                         ),
                       ),
@@ -153,19 +159,20 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                         icon: Icon(
                           Icons.video_library,
                           size: 22.0,
-                          color: Colors.grey.shade400,
+                          color: Colors.grey.shade600,
                         ),
                         text: Text(
                           'Library',
                           style: TextStyle(
                             fontSize: 10.0,
+                            color: Colors.grey.shade600,
                           ),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 1.0,
                   ),
                 ],
               ),
