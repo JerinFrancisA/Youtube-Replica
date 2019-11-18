@@ -91,6 +91,7 @@ class _YouTubeHomeState extends State<YouTubeHome> {
         ),
         bottomNavigationBar: Material(
           child: BottomAppBar(
+            color: Color(0xFF282828),
             child: Container(
               height: 48.0,
               child: Column(
@@ -117,41 +118,49 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                         icon: Icon(
                           FontAwesomeIcons.fire,
                           size: 20.0,
-                          color: Colors.grey.shade600,
+                          color: Colors.grey.shade500,
                         ),
                         text: Text(
                           'Trending',
                           style: TextStyle(
                             fontSize: 10.0,
-                            color: Colors.grey.shade600,
+                            color: Colors.grey.shade500,
                           ),
                         ),
                       ),
-                      BottomAppBarElement(
-                        icon: Icon(
-                          Icons.subscriptions,
-                          size: 22.0,
-                          color: Colors.grey.shade600,
-                        ),
-                        text: Text(
-                          'Subscriptions',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                            color: Colors.grey.shade600,
+                      Stack(
+                        children: [
+                          Icon(
+                            FontAwesomeIcons.dotCircle,
+                            color: Colors.red,
                           ),
-                        ),
+                          BottomAppBarElement(
+                            icon: Icon(
+                              Icons.subscriptions,
+                              size: 22.0,
+                              color: Colors.grey.shade500,
+                            ),
+                            text: Text(
+                              'Subscriptions',
+                              style: TextStyle(
+                                fontSize: 10.0,
+                                color: Colors.grey.shade500,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       BottomAppBarElement(
                         icon: Icon(
                           Icons.mail,
                           size: 24.0,
-                          color: Colors.grey.shade600,
+                          color: Colors.grey.shade500,
                         ),
                         text: Text(
                           'Inbox',
                           style: TextStyle(
                             fontSize: 10.0,
-                            color: Colors.grey.shade600,
+                            color: Colors.grey.shade500,
                           ),
                         ),
                       ),
@@ -159,13 +168,13 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                         icon: Icon(
                           Icons.video_library,
                           size: 22.0,
-                          color: Colors.grey.shade600,
+                          color: Colors.grey.shade500,
                         ),
                         text: Text(
                           'Library',
                           style: TextStyle(
                             fontSize: 10.0,
-                            color: Colors.grey.shade600,
+                            color: Colors.grey.shade500,
                           ),
                         ),
                       ),
