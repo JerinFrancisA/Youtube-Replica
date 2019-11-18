@@ -128,27 +128,19 @@ class _YouTubeHomeState extends State<YouTubeHome> {
                           ),
                         ),
                       ),
-                      Stack(
-                        children: [
-                          Icon(
-                            FontAwesomeIcons.dotCircle,
-                            color: Colors.red,
+                      BottomAppBarElement(
+                        icon: Icon(
+                          Icons.subscriptions,
+                          size: 22.0,
+                          color: Colors.grey.shade500,
+                        ),
+                        text: Text(
+                          'Subscriptions',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                            color: Colors.grey.shade500,
                           ),
-                          BottomAppBarElement(
-                            icon: Icon(
-                              Icons.subscriptions,
-                              size: 22.0,
-                              color: Colors.grey.shade500,
-                            ),
-                            text: Text(
-                              'Subscriptions',
-                              style: TextStyle(
-                                fontSize: 10.0,
-                                color: Colors.grey.shade500,
-                              ),
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                       BottomAppBarElement(
                         icon: Icon(

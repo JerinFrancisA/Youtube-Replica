@@ -29,4 +29,34 @@ List videos = [
     'views': '2.3 B',
     'time': '9 years',
   },
+  {
+    'thumbnail': 'https://i.ytimg.com/vi/3TflpIllQHY/maxresdefault.jpg',
+    'duration': '14:45',
+    'title':
+        'I Put 100 Million Orbeez In My Friend\'s Backyard',
+    'channelImage': 'https://yt3.ggpht.com/a/AGF-l79GuzIhiArE0EfFD8lHukJAj6cw_xcgwtvChA=s900-c-k-c0xffffffff-no-rj-mo',
+    'channel': 'MrBeast',
+    'views': '69.49 M',
+    'time': '1 year',
+  },
+  {
+    'thumbnail': 'https://i.ytimg.com/vi/s4bpRxTKUg0/maxresdefault.jpg',
+    'duration': '46:08',
+    'title':
+        'KSI vs. Logan Paul 2 Launch Press Conference',
+    'channelImage': 'https://yt3.ggpht.com/a/AGF-l7-bgK6nBn1NYWSPqZ__AbCEB_mPxhSVW-2Blw=s900-c-k-c0xffffffff-no-rj-mo',
+    'channel': 'KSI',
+    'views': '5.04 M',
+    'time': '1 month',
+  },
+  {
+    'thumbnail': 'https://i.ytimg.com/vi/8BPN-lQxrVg/maxresdefault.jpg',
+    'duration': '10:36',
+    'title':
+        'Conor McGregor ● 30 Pure BADASS Moments in MMA',
+    'channelImage': 'https://i.ytimg.com/vi/RsapiVt-DYc/maxresdefault.jpg',
+    'channel': 'WeSpeakMMA',
+    'views': '3.65 M',
+    'time': '1 year',
+  },
 ];
