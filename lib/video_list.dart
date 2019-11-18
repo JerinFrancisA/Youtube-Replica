@@ -1,5 +1,15 @@
 List videos = [
   {
+    'thumbnail': 'https://i.ytimg.com/vi/3TflpIllQHY/maxresdefault.jpg',
+    'duration': '14:45',
+    'title':
+        'I Put 100 Million Orbeez In My Friend\'s Backyard',
+    'channelImage': 'https://yt3.ggpht.com/a/AGF-l79GuzIhiArE0EfFD8lHukJAj6cw_xcgwtvChA=s900-c-k-c0xffffffff-no-rj-mo',
+    'channel': 'MrBeast',
+    'views': '69.49 M',
+    'time': '1 year',
+  },
+  {
     'thumbnail': 'https://i.ytimg.com/vi/5NxKNrfqUjs/maxresdefault.jpg',
     'duration': '2:13:36',
     'title': 'SIDEMEN \$20,000 VS \$200 HOLIDAY (EUROPE EDITION)',
@@ -28,16 +38,6 @@ List videos = [
     'channel': 'Shakira',
     'views': '2.3 B',
     'time': '9 years',
-  },
-  {
-    'thumbnail': 'https://i.ytimg.com/vi/3TflpIllQHY/maxresdefault.jpg',
-    'duration': '14:45',
-    'title':
-        'I Put 100 Million Orbeez In My Friend\'s Backyard',
-    'channelImage': 'https://yt3.ggpht.com/a/AGF-l79GuzIhiArE0EfFD8lHukJAj6cw_xcgwtvChA=s900-c-k-c0xffffffff-no-rj-mo',
-    'channel': 'MrBeast',
-    'views': '69.49 M',
-    'time': '1 year',
   },
   {
     'thumbnail': 'https://i.ytimg.com/vi/s4bpRxTKUg0/maxresdefault.jpg',
